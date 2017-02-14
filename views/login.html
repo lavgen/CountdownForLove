@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+<link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Arvo|Barrio" rel="stylesheet">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+		</script>
+
+	</head>
+	<style>
+	html{
+		background-color: #833f59;
+	}
+	body{
+	  text-align: center;
+	  background: #4b5408
+	  font-family: sans-serif;
+	  font-weight: 100;
+	  overflow: hidden;
+	}
+
+	h1{
+	  color: #763950;
+	  font-weight: 100;
+	  font-size: 90px;
+	  font-family: 'Arvo';
+	  margin: 40px 0px 20px;
+	}
+	#createuser{
+	   font-family: 'Josefin Sans', sans-serif;
+	    font-weight: 300;
+	   color: white;
+	   background-color: #763950;
+	   position: absolute;
+	   top: 15%;
+	   left: 15%;
+	   width: 30%;
+	   height: 60%;
+	   font-size: 35px;
+	}
+	#existinguser{
+		font-family: 'Josefin Sans', sans-serif;
+	    font-weight: 300;
+	    color: white;
+		background-color: #763950;
+    	position: absolute;
+    	top: 15%;
+    	right: 15%;
+    	width: 30%;
+    	height: 60%;
+    	font-size: 35px;
+	}
+	#someInput{
+		top: 3%;
+		position: fixed;
+		display: block;
+		left: 10%;
+	}
+	#time{
+		top: 3%;
+		position: fixed;
+		display: block;
+	}
+	#start{
+		top: 9%;
+		position: fixed;
+		display: block;
+	}
+	#clockdiv {
+	    font-family: sans-serif;
+	    display: inline-block;
+	    font-weight: 100;
+	    text-align: center;
+	    font-size: 85px;
+	    color: white;
+	    background: #763950;
+	    position: absolute;
+	    width: 101%;
+	    left: 0%;
+	    top: 30%;
+	}
+	#color {
+	    left: 0%;
+	    background: #763950;
+	    width: 102%;
+	    position: absolute;
+	    top: 80%;
+	    height: 9.5em;
+	}
+	#clockdiv > div{
+		padding: 10px;
+		border-radius: 3px;
+		
+		display: inline-block;
+	}
+
+	#clockdiv div > span{
+		border-radius: 3px;
+	  	color: white;
+	  	font-color: black;
+		display: inline-block;
+	}
+
+	.smalltext{
+		padding-top: 5px;
+		font-size: 16px;
+	}
+	#showClock{
+		display: none;
+
+	}
+	</style>
+	<body>
+		<div id="main">
+
+		<div id="createuser"><br><br>
+		<span style="font-size:30px; " >FOR NEW USERS</span>
+		<form action="/v" method="POST" onsubmit="submitButton.disabled = true; return true;">
+		<input type="text" placeholder="Username for you&Your&#x2665;" name="username" style="margin-top: 20%; font-size:15px; width:80%;" ><br>
+		<input type="date" placeholder="Special date to countdown:* " name ="enteredDate" style="font-size:15px; width:80%;"   ><br>
+		<button name="submitButton" type="submit" style="font-size:15px; width:80%;" onclick="showHide(); loadReq();"  >Create new user</button>
+		</form>
+		</div>
+
+		<div id="existinguser"><br><br>
+		<span style="font-size:30px;"> FOR EXISTING USERS</span>
+		<form action="/v" method="POST">
+		<input type="text" style="     margin-top: 20%; font-size:15px; width:80%;" placeholder="Username:* " name="username"  >
+		<button  name="submitButton" type="submit" onclick="showHide(); loadReq();"> Enter Username</button>
+		</form>
+		</div>
+
+		</div>
+
+	<div id="showClock"> 
+		<h1>hours to l o•v e </h1>
+		<div value="clock" id="clockdiv">
+		  <div>
+		    <span class="days"></span> 
+		    <div class="smalltext">Days</div>
+		   </div>
+		  <div>
+		    <span class="hours"></span> 
+		    <div class="smalltext">Hours</div> 
+		  </div>
+		  <div>
+		    <span class="minutes"></span> 
+		     <div class="smalltext">Minutes</div> 
+		   </div>
+		  <div>
+		    <span class="seconds"></span> 
+		    <div class="smalltext">Seconds</div> 
+		  </div>
+		</div> 
+
+		<div id="color"></div> 
+	</div>
+		<script src="js/countdown.js"></script> 
+		<script>
+		
+		 function showHide() {
+			   var div = document.getElementById('main');
+			   if (div.style.display == 'none') {
+			     div.style.display = '';
+			   }
+			   else {
+			     div.style.display = 'none';
+			   }
+			   document.getElementById('showClock').style.display = "block";
+			  document.documentElement.style.backgroundColor = "white";
+			 }
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "countdownforlove",
+  "version": "1.0.0",
+  "description": "Countdown for people who are waiting to see each other!",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon loveServer.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "connect-redis": "^3.2.0",
+    "cors": "^2.8.1",
+    "express": "^4.14.1",
+    "hogan-express": "^0.5.2",
+    "jade": "^1.11.0",
+    "mongodb": "^2.2.22",
+    "mongoose": "^4.8.1",
+    "monk": "^3.1.4",
+    "nodemon": "^1.11.0",
+    "session-middleware": "^1.0.2"
+  }
+}

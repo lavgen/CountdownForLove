@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+	body{
+	  text-align: center;
+	  background: #4b5408
+	  font-family: sans-serif;
+	  font-weight: 100;
+	  overflow: hidden;
+	}
+
+	h1{
+	  color: #763950;
+	  font-weight: 100;
+	  font-size: 90px;
+	  font-family: 'Arvo';
+	  margin: 40px 0px 20px;
+	}
+	#someInput{
+		top: 3%;
+		position: fixed;
+		display: block;
+		left: 10%;
+	}
+	#time{
+		top: 3%;
+		position: fixed;
+		display: block;
+	}
+	#start{
+		top: 9%;
+		position: fixed;
+		display: block;
+	}
+	#clockdiv {
+	    font-family: sans-serif;
+	    display: inline-block;
+	    font-weight: 100;
+	    text-align: center;
+	    font-size: 85px;
+	    color: white;
+	    background: #763950;
+	    position: absolute;
+	    width: 101%;
+	    left: 0%;
+	    top: 30%;
+	}
+	#color {
+	    left: 0%;
+	    background: #763950;
+	    width: 102%;
+	    position: absolute;
+	    top: 80%;
+	    height: 9.5em;
+	}
+	#clockdiv > div{
+		padding: 10px;
+		border-radius: 3px;
+		
+		display: inline-block;
+	}
+
+	#clockdiv div > span{
+		border-radius: 3px;
+	  	color: white;
+	  	font-color: black;
+		display: inline-block;
+	}
+
+	.smalltext{
+		padding-top: 5px;
+		font-size: 16px;
+	}
+	</style>
+	<body>
+			<h1>hours to l o•v e </h1>
+		<form action="/var" method="POST">
+		  <input type="text" placeholder="Username for you&Your&#x2665;" name="username" style="position:fixed; top:2%; left:25%; width:12%; text-align:center;" >
+		  <input type="text" placeholder="Special date to countdown:* " name="date"  style="position:fixed; top:2%; left:42%; width:15%; text-align:center;">
+		  <button type="submit" style="position:fixed; top:2%; left:60%; width:12%; text-align:center;" onclikc="loadReq()">Submit</button>
+		</form>
+		<div value="clock" id="clockdiv">
+		  <div>
+		    <span class="days"></span>
+		    <div class="smalltext">Days</div>
+		  </div>
+		  <div>
+		    <span class="hours"></span>
+		    <div class="smalltext">Hours</div>
+		  </div>
+		  <div>
+		    <span class="minutes"></span>
+		    <div class="smalltext">Minutes</div>
+		  </div>
+		  <div>
+		    <span class="seconds"></span>
+		    <div class="smalltext">Seconds</div>
+		  </div>
+		</div>
+
+		<div id="color"></div>
+			<script>
+
+		// <script src="js/countdown.js"></script> 
+	</body>
+</html>
