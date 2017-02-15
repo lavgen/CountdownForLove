@@ -1,0 +1,100 @@
+	
+	html{
+	   background-color: #833f59;
+	}
+	body{
+		text-align: center;
+	}
+
+	h1{
+	  color: #763950;
+	  font-weight: 100;
+	  font-size: 90px;
+	  font-family: 'Arvo';
+	  margin: 40px 0px 20px;
+	}
+	.inputBox{
+		margin-top: 3em;
+		font-size:15px; 
+		width:80%;
+	}
+	#createuser{
+		font-family: 'Josefin Sans', sans-serif;
+	    font-weight: 300;
+	    color: white;
+	    background-color: #763950;
+	    position: absolute;
+	    top: 15%;
+	    left: 15%;
+	    width: 30%;
+	    height: 60%;
+	    font-size: 35px;
+	}
+
+	#existinguser {
+	    font-family: 'Josefin Sans', sans-serif;
+	    font-weight: 300;
+	    color: white;
+	    background-color: #763950;
+	    position: absolute;
+	    top: 15%;
+	    right: 15%;
+	    width: 30%;
+	    height: 60%;
+	    font-size: 35px;
+	}
+	#someInput{
+		top: 3%;
+		position: fixed;
+		display: block;
+		left: 10%;
+	}
+	#time{
+		top: 3%;
+		position: fixed;
+		display: block;
+	}
+	#start{
+		top: 9%;
+		position: fixed;
+		display: block;
+	}
+	#clockdiv {
+	    font-family: sans-serif;
+	    display: inline-block;
+	    font-weight: 100;
+	    text-align: center;
+	    font-size: 85px;
+	    color: white;
+	    background: #763950;
+	    position: absolute;
+	    width: 101%;
+	    left: 0%;
+	    top: 30%;
+	}
+	#color {
+	    left: 0%;
+	    background: #763950;
+	    width: 102%;
+	    position: absolute;
+	    top: 80%;
+	    height: 9.5em;
+	}
+	#clockdiv > div{
+		padding: 10px;
+		border-radius: 3px;
+		
+		display: inline-block;
+	}
+
+	#clockdiv div > span{
+		border-radius: 3px;
+	  	color: white;
+	  	font-color: black;
+		display: inline-block;
+	}
+
+	.smalltext{
+		padding-top: 5px;
+		font-size: 16px;
+	}
