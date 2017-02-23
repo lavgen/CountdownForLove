@@ -119,7 +119,7 @@
 
 		<div id="createuser"><br><br>
 		<span style="font-size:30px; " >FOR NEW USERS</span>
-		<form action="/v" method="POST" onsubmit="submitButton.disabled = true; return true;">
+		<form action="/newUser" method="GET" onsubmit="submitButton.disabled = true; return true;">
 		<input type="text" placeholder="Username for you&Your&#x2665;" name="username" style="margin-top: 20%; font-size:15px; width:80%;" ><br>
 		<input type="date" placeholder="Special date to countdown:* " name ="enteredDate" style="font-size:15px; width:80%;"   ><br>
 		<button name="submitButton" type="submit" style="font-size:15px; width:80%;" onclick="showHide(); loadReq();"  >Create new user</button>
@@ -128,7 +128,7 @@
 
 		<div id="existinguser"><br><br>
 		<span style="font-size:30px;"> FOR EXISTING USERS</span>
-		<form action="/v" method="POST">
+		<form action="/existingUser" method="GET">
 		<input type="text" style="margin-top: 20%; font-size:15px; width:80%;" placeholder="Username:* " name="username"  >
 		<button  name="submitButton" type="submit" onclick="showHide(); loadReq();"> Enter Username</button>
 		</form>
@@ -136,7 +136,7 @@
 
 		</div>
 
-	<div id="showClock"> 
+	<!-- <div id="showClock"> 
 		<h1>hours to l o•v e </h1>
 		<div value="clock" id="clockdiv">
 		  <div>
@@ -158,21 +158,21 @@
 		</div> 
 
 		<div id="color"></div> 
-	</div>
+	</div> -->
 		<script src="js/countdown.js"></script> 
 		<script>
 		
-		 function showHide() {
-			   var div = document.getElementById('main');
-			   if (div.style.display == 'none') {
-			     div.style.display = '';
-			   }
-			   else {
-			     div.style.display = 'none';
-			   }
-			   document.getElementById('showClock').style.display = "block";
-			  document.documentElement.style.backgroundColor = "white";
-			 }
+		 // function showHide() {
+			//    var div = document.getElementById('main');
+			//    if (div.style.display == 'none') {
+			//      div.style.display = '';
+			//    }
+			//    else {
+			//      div.style.display = 'none';
+			//    }
+			//    document.getElementById('showClock').style.display = "block";
+			//   document.documentElement.style.backgroundColor = "white";
+			//  }
 		</script>
 
 	</body>

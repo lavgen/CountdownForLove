@@ -1,0 +1,139 @@
+/*iphone4*/
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+	#existinguser{
+		left: 5%;
+    	top: 35%;
+    	height: 25%;
+    	width: 90%;
+	}
+
+	#title{
+		font-size: 13px;
+	}
+	.inputBox {
+    	margin-top: 1em;
+    	font-size: 7.5px;
+    	width: 98%;
+	}	
+
+	#Submit{
+		width: auto;
+		height: 7%;
+		text-align: left;
+		font-size: 7.5px;
+	}
+	#createuser{
+		width: 90%;
+		left: 5%;
+		top: 5%;
+		height: 25%;
+
+	}
+	#clockdiv{
+		font-size: 7px;
+	}
+}
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media screen and (min-width: 320px) and (max-width: 568px){
+	#existinguser{
+		left: 5%;
+    	top: 35%;
+    	height: 25%;
+    	width: 90%;
+	}
+	h1{
+		font-size:40px;
+	}
+	#title{
+		font-size: 16px;
+	}
+	.inputBox {
+    	margin-top: 1em;
+    	font-size: 9.5px;
+    	width: 98%;
+	}	
+
+	#Submit{
+		width: auto;
+		height: 8%;
+		text-align: left;
+		font-size: 9.5px;
+	}
+	#createuser{
+		width: 90%;
+		left: 5%;
+		top: 5%;
+		height: 25%;
+
+	}
+	#clockdiv{
+		font-size: 7px;
+	}
+	.smalltext{
+		font-size:  7px;
+	}
+	#clockdiv{
+		font-size: 25px;
+	}
+}
+/* Portrait and Landscape */
+@media screen and (min-width: 375px) and (max-width: 667px) { 
+	#title{
+		font-size: 19px;
+	}
+	h1{
+		font-size:40px;
+	}
+	#existinguser{
+		left: 5%;
+    	top: 35%;
+    	height: 25%;
+    	width: 90%;
+	}
+
+	.inputBox {
+    	margin-top: 1em;
+    	font-size: 11.5px;
+    	width: 98%;
+	}	
+
+	#Submit{
+		width: auto;
+		height: 9%;
+		text-align: left;
+		font-size: 11.5px;
+	}
+	#createuser{
+		width: 90%;
+		left: 5%;
+		top: 5%;
+		height: 25%;
+
+	}
+	#clockdiv{
+		font-size: 30px;
+	}
+}
+
+/* Portrait and Landscape */
+@media screen and (min-width: 414px) and (max-width: 736px) { 
+h1{
+		font-size:70px;
+	}
+#title{
+		font-size: 19px;
+	}
+#clockdiv{
+		font-size: 30px;
+	}
+}
+@media screen and (min-width: 736px){
+	h1{
+		font-size:90px;
+	}
+	#clockdiv{
+		font-size: 85px;
+	}
+}

@@ -22,7 +22,7 @@
 
 	server.use(express.static(__dirname+'/public'));
 	//connect to database named countdown
-	mongoose.connect('mongodb://192.168.1.66:6666/countdown');
+	mongoose.connect('mongodb://localhost:6666/countdown');
 	var db = mongoose.connection;
 	 
 	db.on('error', function (err) {
@@ -50,8 +50,6 @@
 	// 	// this sets up the type of templating engine to use ( in this case hogan-express )
 	// 	// other examples are jade, handlebars, mustache, etc.
 	server.engine('html', require('hogan-express'));
-
-
 	server.set('views',  __dirname+ '/views'); // set the folder where the views ( ie. template files ) are in
 	server.set('view engine', 'html'); 
 
@@ -68,8 +66,15 @@
 	server.use(cookieParser());
 	server.use(expressSession({secret:'prop', cookie:{maxAge:1000}}));
 
+	server.get('/test', function(req,res){
+
+		res.render('viewTest',{test : 2});
+
+	});
 	server.get('/', function(req, res){
-	server.locals.title = 'Countdown';	
+		 // clicked == false;
+		server.locals.title = 'Countdown';	
+
 	    var html = '<meta name="viewport" content="width=device-width, initial-scale="1">'+
 	    '<link href="https://fonts.googleapis.com/css?family=Barrio">'+
 		'<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i">'+
@@ -92,7 +97,7 @@
 		'<span id="title"> FOR EXISTING USERS</span>' +
 		'<form action="/" method="POST">' +
 		'<input id="userExists" class="inputBox" type="text"  placeholder="Username:* " name="userName">'+
-		'<button name="submitButton1" id="Submit" type="submit"> Enter Username</button>'+
+		'<button name="submitButton1" id="Submit" type="submit" onclick="return turn();> Enter Username</button>'+
 		'</form>' +
 		'</div>'+
 		'</div>'+
@@ -106,12 +111,18 @@
 	  	//if it is not taken save user and send the deadline they put as variable
 	  	//I couldn't create th necessary if statement for to detect which submit button user has pressed in form
 	  	//and i couldn't create the for loop to check each name and see if that username has been taken before or not
+	  	function turn()
+		{
+		   // clicked == true;
+		}
+
+//if statement on form submit  && if submit is empty alert user and not go to the next page 
 
 		User.findOne({'name': req.session.userName}, function(err, exist) {
 		console.log('searching for that username');
-		
-		if(exist && !err && req.session.userExists != ""){
-			console.log('TESTING PURPOSES BELOW REQ.SESSION USER EXISTS' + req.session.userExists);
+
+		if(exist && !err ){
+			// console.log('TESTING PURPOSES BELOW REQ.SESSION USER EXISTS' + req.session.userExists);
 		    //Get that user's deadline
 		    User.findOne({'name' : req.session.userName},'date', function (err, person) {
 		    	// I don't know what it did
@@ -121,18 +132,20 @@
 			
 			    if (req.session.userName) {
 
-			    	html = existingDeadline;    // html += '<br>Your existing deadline from your session is: ' +  existingDeadline;
+			    	html = existingDeadline;   
 					console.log( req.session.userExists + "TYPE IS");  			
+	  			}else if (req.session.userName !== person.name ) {
+	  					console.log('NOT FOUND USERNAME!!' + 'CLICKED');
 	  			}
 	  		// - Answer - It is sending a date and that is what I want for the countdown.js
 	  		// I am using xmlhttp request in my countdown js to get the date and set it inside countdown function
 	  		//I am using res send because my input is not in a template or html page so there is no html to render, i get error w render
-	  		res.render( html);
+	  		res.send( html);
 	  		
 
 			});
 		  
-		  	} else if (req.session.userNew != "" ) {
+		  	} else  {
  
 		  	//create new user for mongodb
 		  	user0 = new User({
