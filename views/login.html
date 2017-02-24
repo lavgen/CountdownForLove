@@ -135,44 +135,16 @@
 		</div>
 
 		</div>
-
-	<!-- <div id="showClock"> 
-		<h1>hours to l o•v e </h1>
-		<div value="clock" id="clockdiv">
-		  <div>
-		    <span class="days"></span> 
-		    <div class="smalltext">Days</div>
-		   </div>
-		  <div>
-		    <span class="hours"></span> 
-		    <div class="smalltext">Hours</div> 
-		  </div>
-		  <div>
-		    <span class="minutes"></span> 
-		     <div class="smalltext">Minutes</div> 
-		   </div>
-		  <div>
-		    <span class="seconds"></span> 
-		    <div class="smalltext">Seconds</div> 
-		  </div>
-		</div> 
-
-		<div id="color"></div> 
-	</div> -->
 		<script src="js/countdown.js"></script> 
 		<script>
+
+		var d = "{{error}}" ;
+		var submitBut = document.getElementById('submitButton');
+		console.log(typeof d , d);
+		if ( d !== "") {
+			alert(d);
+		};
 		
-		 // function showHide() {
-			//    var div = document.getElementById('main');
-			//    if (div.style.display == 'none') {
-			//      div.style.display = '';
-			//    }
-			//    else {
-			//      div.style.display = 'none';
-			//    }
-			//    document.getElementById('showClock').style.display = "block";
-			//   document.documentElement.style.backgroundColor = "white";
-			//  }
 		</script>
 
 	</body>

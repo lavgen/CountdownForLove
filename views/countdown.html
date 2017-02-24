@@ -83,20 +83,12 @@
 		padding-top: 5px;
 		font-size: 16px;
 	}
+
+
 	</style>
 	<body>
  		<h1>hours to l o•v e </h1>
-		<!-- <form action="/v" method="POST" onsubmit="submitButton.disabled = true; return true;">
-		  <input type="text" placeholder="Username for you&Your&#x2665;" name="username" style="position:fixed; top:2%; left:25%; width:12%; text-align:center;" >
-		  <input type="date" placeholder="Special date to countdown:* " name="enteredDate"  style="position:fixed; top:2%; left:42%; width:15%; text-align:center;">
-		  <button onclick="loadReq()" name="submitButton" type="submit" style="position:fixed; top:2%; left:60%; width:12%; text-align:center;" >Create user</button>
-		 <button  id="real" style="position:fixed; left:80%; top:1%;">REALSUBMIT</button>
-		</form> -->
-		<!-- <form action="/v" method="POST">
-		  <input type="text" placeholder="Username for you&Your&#x2665;     " name="name">
-		  <input type="text" placeholder="Special date to countdown:*&nsbp;  " name="quote">
-		  <button type="submit" onclick="loadReq()">Submit</button>
-		  <input type="submit" id="start" > -->
+		
 		<div value="clock" id="clockdiv">
 		  <div>
 		    <span class="days"></span>
@@ -121,11 +113,11 @@
 		
 		<script>
 		
-			var d = {{tt}};
-			var d2 = Date.parse(d);
-			var d3 =  Date.parse(new Date(d));
-			console.log(d + d2 +d3 );
-			alert(d2);
+			// get the date string from the div above so that it shows up in JS like a string
+   			 var dateString = "{{date}}" ; 
+   			// then pass that string into a new Date object
+    		var d = new Date( dateString );
+			console.log(dateString + " date string is" );
 			var deadline = d;
 			console.log('deadline is:'+ deadline);
 			
