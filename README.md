@@ -1,3 +1,8 @@
 # CountdownForLove
 
-This is a project in progress. I am building an application with MEAN Stack
+This is a countdown application built with Node / Express and MongoDb.
+
+Still in progress.
+
+###Application Website:###
+  [CountdownForLove](http://www.lalavgen.com:4444/login).
